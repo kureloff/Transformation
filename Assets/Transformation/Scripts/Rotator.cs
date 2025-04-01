@@ -4,13 +4,8 @@ public class Rotator : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Rotate();
-    }
-
-    private void Rotate()
-    {
-        transform.Rotate(Vector3.up * _speed, Space.Self);
+        transform.Rotate(Vector3.up * _speed * Time.deltaTime, Space.Self);
     }
 }

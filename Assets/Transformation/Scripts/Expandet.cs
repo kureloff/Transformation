@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Expandet : MonoBehaviour
@@ -8,11 +6,6 @@ public class Expandet : MonoBehaviour
 
     private void Update()
     {
-        Expand();
-    }
-
-    private void Expand()
-    {
-        transform.localScale += Vector3.one * _scaleIncrement;
+        transform.localScale += Vector3.one * _scaleIncrement * Time.deltaTime;
     }
 }

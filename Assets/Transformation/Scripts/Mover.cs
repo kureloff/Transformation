@@ -4,13 +4,8 @@ public class Mover : MonoBehaviour
 {
     private float _speed = 0.5f;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Move();
-    }
-
-    private void Move()
-    {
-        transform.Translate(Vector3.forward * _speed, Space.Self);
+        transform.Translate(Vector3.forward * _speed * Time.deltaTime, Space.Self);
     }
 }

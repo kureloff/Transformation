@@ -1,11 +1,16 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class Mover : MonoBehaviour
+public class Mover : MonoBehaviour
 {
+    private float _speed = 0.5f;
+
     private void FixedUpdate()
     {
         Move();
     }
 
-    protected abstract void Move();
+    private void Move()
+    {
+        transform.Translate(Vector3.forward * _speed, Space.Self);
+    }
 }
